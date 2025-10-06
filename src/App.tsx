@@ -50,10 +50,9 @@ function App() {
       <Navbar cart={cart} />
 
      
-      <section className="max-w-6xl mx-auto py-10 px-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} addToCart={addToCart} />
-        ))}
+     <div className="flex py-10 px-2.5 gap-3.5">
+        <section className=" w-9/12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        {products.map((product) => <ProductCard key={product.id} product={product} addToCart={addToCart}/>)}
       </section>
 
       
@@ -63,6 +62,8 @@ function App() {
         removeFromCart={removeFromCart}
         totalPrice={totalPrice}
       />
+     </div>
+
     </div>
   );
 }

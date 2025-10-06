@@ -10,7 +10,7 @@ interface CartSectionProps {
 
 const CartSection = ({ cart, addToCart, removeFromCart, totalPrice }: CartSectionProps) => {
   return (
-    <section className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md mb-10">
+    <section className="w-3/12 mx-auto bg-white p-8 rounded-2xl shadow-md mb-10">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">🛒 Your Cart</h2>
 
       {cart.length === 0 ? (

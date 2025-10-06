@@ -1,6 +1,5 @@
 import type { Product } from "../types/type";
 
-
 interface ProductCardProps {
   product: Product;
   addToCart: (product: Product) => void;
@@ -8,20 +7,20 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, addToCart }: ProductCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-      <div className="flex flex-col items-center space-y-3">
-        <div className="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-3xl font-bold">
-          {product.name.charAt(0)}
-        </div>
-        <h2 className="text-lg font-semibold text-gray-800">{product.name}</h2>
-        <p className="text-gray-600 text-sm">${product.price}</p>
-        <button
-          onClick={() => addToCart(product)}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg mt-2 font-medium transition-all"
-        >
-          Add to Cart
-        </button>
-      </div>
+    <div className="bg-white shadow-md rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition duration-300 ease-in-out border border-gray-100">
+      <h1 className="text-lg font-semibold text-gray-800 mb-2 text-center">
+        {product.name}
+      </h1>
+      <p className="text-indigo-600 font-bold text-xl mb-3">
+        ${product.price}
+      </p>
+
+      <button
+        onClick={() => addToCart(product)}
+        className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium shadow-sm transition-transform hover:scale-105"
+      >
+        🛒 Add to Cart
+      </button>
     </div>
   );
 };
